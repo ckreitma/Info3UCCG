@@ -1,0 +1,7 @@
+Datos iniciales
+1) Punto superior izquierdo (x0,y0)
+2) Punto inferior derecho (x1,y1)
+3) Grado de curvatura
+    0 = Los bordes forman un ángulo recto
+    1 = El rectángulo se convierte en un óvalo.
+    Cuánto del segmento (de cada lado) es curvo.
