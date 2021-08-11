@@ -1,0 +1,3 @@
+Mejorar el algoritmo pygame02_gilla, en lo que corresponde
+a la función "linea" para que pueda dibujar cualquier linea
+en cualquier dirección.
