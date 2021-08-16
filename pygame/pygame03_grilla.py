@@ -61,8 +61,8 @@ def linea(screen, x0, y0, x1, y1, color):
             x = x + pendiente
 
     # Imprimimos los pixeles extremos en rojo.
-    pixel(screen, x0, y0, ROJO)
-    pixel(screen, x1, y1, ROJO)
+    #pixel(screen, x0, y0, ROJO)
+    #pixel(screen, x1, y1, ROJO)
 
 
 while running:
@@ -73,7 +73,7 @@ while running:
     # pygame.draw.rect(screen, BLUE, (200, 150, 100, 50))
     # pygame.draw.aaline(screen, (0, 100, 255), (0, 0), (ancho-1, alto-1))
     # pygame.draw.aaline(screen, (50, 180, 40), (ancho-1, 0), (0, alto-1))
-    dibujar_grilla(screen)
+    # dibujar_grilla(screen)
     # pixel(screen, 4, 7, WHITE)
     linea(screen, 10, 20, 2, 4, GRIS)
     linea(screen, 12, 20, 50, 25, GRIS)
