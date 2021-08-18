@@ -134,7 +134,7 @@ if __name__ == '__main__':
         if event.type == pygame.QUIT:
             running = False
         screen.fill(BLACK)
-        # dibujar_grilla(screen)
+        dibujar_grilla(screen)
         # Prueba de pixel con transparencias
         putpixel(screen, (4, 7), YELLOW)
         putpixel(screen, (5, 8), YELLOW, alpha=0.6)
