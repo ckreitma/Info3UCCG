@@ -156,7 +156,7 @@ def principal():
         screen.fill((0, 0, 0))
         archivo = './pygame/poligono2.txt'
         #escanear_linea(screen, leer_puntos(archivo), 300)
-        #escanear_linea(screen, leer_puntos(archivo), 350)
+        escanear_linea(screen, leer_puntos(archivo), 350)
         #escanear_linea(screen, leer_puntos(archivo), 255)
         #rellenar(screen, leer_puntos(archivo))
         dibujar_bordes(screen, leer_puntos(archivo))

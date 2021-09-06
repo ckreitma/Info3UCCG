@@ -49,7 +49,8 @@ def tranformar_triangulos():
     m = np.matmul(t0, np.matmul(r0, t1))
     print(f'Forma de m {m.shape} \n{m}')
 
-    triangulo2 = np.array([np.matmul(p1, m), np.matmul(p2, m), np.matmul(p3, m), np.matmul(p4, m)])
+    #triangulo2 = np.array([np.matmul(p1, m), np.matmul(p2, m), np.matmul(p3, m), np.matmul(p4, m)])
+    triangulo2 = np.array([np.matmul(p1, escalar), np.matmul(p2, escalar), np.matmul(p3, escalar), np.matmul(p4, escalar)])
 
     plt.figure()
     # plt.plot(
