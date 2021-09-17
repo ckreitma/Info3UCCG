@@ -30,12 +30,26 @@ edges = (
 
 
 def Cube():
+    # Borrar la pantalla
     glClear(GL_COLOR_BUFFER_BIT)
+
+    # Selecciona la matriz de proyección
     glMatrixMode(GL_PROJECTION)
-    glLoadIdentity()
+    glLoadIdentity()  # Inicializar la matriz.
+
+    # Ángulo, ratio, near, far
     gluPerspective(45, 600/600, 0.1, 50.0)
-    glTranslatef(0.0, 0.0, -5)
-    glRotatef(45, 0.1, 0.1, 0.1)
+
+    # Seleccionar la matriz modelview
+    glMatrixMode(GL_MODELVIEW)
+
+    # Inicializar la matriz.
+    glLoadIdentity()
+
+    glTranslatef(0.0, 0.0, -5.0)
+
+    # Ángulo,
+    glRotatef(45, 1, 0.3, 0.1)
     glBegin(GL_LINES)
     for edge in edges:
         for vertex in edge:
@@ -49,7 +63,7 @@ def main():
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB)
     glutInitWindowSize(600, 600)
     glutInitWindowPosition(0, 0)
-    glutCreateWindow("My Second OpenGL Program")
+    glutCreateWindow("Cubo 3D sencillo con líneas")
     glutDisplayFunc(Cube)
     glutMainLoop()
 
