@@ -23,7 +23,7 @@ def main():
     ambientColor = [1., 1., 1., 1.]
     glLightfv(GL_LIGHT0, GL_POSITION, lightZeroPosition)
     glLightfv(GL_LIGHT0, GL_DIFFUSE, lightZeroColor)
-    #glLightfv(GL_LIGHT0, GL_AMBIENT, ambientColor)
+    # glLightfv(GL_LIGHT0, GL_AMBIENT, ambientColor)
     glLightf(GL_LIGHT0, GL_CONSTANT_ATTENUATION, 0.1)
     glLightf(GL_LIGHT0, GL_LINEAR_ATTENUATION, 0.05)
     glEnable(GL_LIGHT0)
