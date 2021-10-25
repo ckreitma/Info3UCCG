@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> D3 01 </title>
+    <script src='lib/d3.js'></script>
+</head>
+<body>
+    <p>Primer Párrafo Original</p>
+    <svg width="500" height="500">
+        <rect x="0" y="0" width="300" height="200" fill="#AA5611"></rect>
+    </svg>
+    <script>
+        d3.select("p").style("color","green").text("Prueba").style("font-weight","bold");
+    </script>
+</body>
+</html>

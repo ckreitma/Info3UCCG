@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+<style>
+</style>
+    <script src='lib/d3.js'></script>
+</head>
+<body>
+
+<script>
+    var myData = ["Hello World!", "Hello D3","Hello JavaScript"];
+    var p = d3.select("body")
+        .select("p")
+        .data(myData)
+        .enter()
+        .append("p")
+        .text(function (d, i) {
+            return d;
+        });
+</script>
+</body>
+</html>

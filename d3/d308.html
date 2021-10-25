@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<style>
+</style>
+    <script src='lib/d3.js'></script>
+</head>
+<body>
+    <script>
+
+        d3.csv("./data/employees.csv", function(data) {
+            console.log(data);
+        });
+
+
+
+        d3.json("./data/users.json")
+            .then(function(data) {
+                console.log(data);
+                d3.select("body")
+                .selectAll("p")
+                .data(data)
+                .enter()
+                .append("p")
+                .text(function(d,i) {
+                    return "pos=" + i + "-->" + d.name + ", " + d.location;
+                });
+
+        });
+    </script>
+</body>
+</html>
