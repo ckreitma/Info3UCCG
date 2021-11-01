@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en" prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8">
+        <meta X-Content-Type-Options: nosniff>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="./lib/britecharts.min.css" type="text/css" charset=utf-8/>        
+        <script src="./lib/d3-selection.js"></script>
+        <script src="./lib/britecharts.min.js" type="text/javascript"></script>
+        <script src="./lib/lodash.min.js" type="text/javascript"/></script>
+        <title>BriteCharts - Animated</title>
+    </head>
+    <body>
+        <div class="grafico"></div>
+
+        <script>
+            const datos = [
+                { name: 'Luminous', value: 2 },
+                { name: 'Glittering', value: 5 },
+                { name: 'Intense', value: 4 },
+                { name: 'Radiant', value: 3 },
+                { name: 'Extra',value: 3},
+            ];
+
+            const container = d3.select('.grafico');
+            const barChart = britecharts.bar();
+            barChart
+                .margin({left: 100})
+                .isHorizontal(true)
+                .height(400)
+                .width(600)
+                .isAnimated(true)
+                .colorSchema(britecharts.colors.colorSchemas.britecharts);
+    
+
+            container.datum(datos).call(barChart);
+
+            const redrawChart = () => {
+                const newContainerWidth = container.node() ? container.node().getBoundingClientRect().width : false;
+
+                // Setting the new width on the chart
+                barChart.width(newContainerWidth);
+
+                // Rendering the chart again
+                container.call(barChart);
+            };
+            const throttledRedraw = _.throttle(redrawChart, 200);
+
+            window.addEventListener("resize", throttledRedraw);
+        </script>
+    </body>
+</html>
